@@ -850,7 +850,7 @@ namespace dlib
                         dnn_prefer_fastest_algorithms()?CUDNN_CONVOLUTION_FWD_PREFER_FASTEST:CUDNN_CONVOLUTION_FWD_NO_WORKSPACE,
                         std::numeric_limits<size_t>::max(),
                         &forward_best_algo));
-                forward_algo = forward_best_algo;
+                // forward_algo = forward_best_algo;
                 CHECK_CUDNN(cudnnGetConvolutionForwardWorkspaceSize( 
                         context(),
                         descriptor(data),
